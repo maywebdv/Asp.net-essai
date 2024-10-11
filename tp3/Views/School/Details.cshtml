@@ -1,0 +1,45 @@
+﻿@model tp3.Models.School
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>School</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SchoolName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SchoolName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SchoolAdress)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SchoolAdress)
+        </dd>
+
+        
+        <dt class="col-sm-2">
+            <label>Moyenne d'age des etudiants'</label>
+        </dt>
+        <dd class="col-sm-10">
+        <label>@ViewBag.AgeAverage</label>    
+        </dd>
+        <dd class="col-sm-2">
+        <label>Mombre d'etudiants'</label>
+        </dd>
+        <dd class="col-sm-10">
+        <label>@ViewBag.StudentCount</label>
+        </dd>
+
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.SchoolID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
